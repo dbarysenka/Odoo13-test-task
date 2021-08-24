@@ -5,24 +5,24 @@ from odoo import api, models, fields
 
 class CustomProductManufacturer(models.Model):
     _name = 'product.manufacturer'
-    _description = "Product Manufacturer"
+    _description = 'Product Manufacturer'
 
     name = fields.Char('Manufacturer', required=True)
 
 
 class CustomProductModel(models.Model):
     _name = 'product.model'
-    _description = "Product Model"
+    _description = 'Product Model'
 
     name = fields.Char('Model', required=True)
-    parent_id = fields.Many2one('product.manufacturer', "Manufacturer")
+    parent_id = fields.Many2one('product.manufacturer', 'Manufacturer')
 
 
 class CustomProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    manufacturer = fields.Many2one('product.manufacturer', "Manufacturer")
-    model = fields.Many2one('product.model', "Model")
+    manufacturer = fields.Many2one('product.manufacturer', 'Manufacturer')
+    model = fields.Many2one('product.model', 'Model')
 
     @api.onchange('manufacturer')
     def create_domain(self):
