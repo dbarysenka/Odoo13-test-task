@@ -1,0 +1,16 @@
+{
+    'name' : 'Odo-13-Test-Task',
+    'version' : '0.1',
+    'summary': 'Product Manufacturer, Model',
+    'description': """Custom product manufacturer, product model""",
+    'author': "Barysenka Denis",
+    'website': "https://github.com/dbarysenka",
+    'category': 'Customization',
+    'depends' : ['product'],
+    'data': ['views\custom_menu.xml'],
+    'demo': [],
+    'qweb': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}
